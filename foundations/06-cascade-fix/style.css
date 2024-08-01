@@ -2,6 +2,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modified Code
+.para {
+  font-size: 22px;
+  font-weight: 800;
+  color: hs1(0, 0%, 0%);
+}
+
+.para.small-para {
+  font-size: 14px;
+}
+*/
+
+/* Incorrect Code
 .para,
 .small-para {
   color: hsl(0, 0%, 0%);
@@ -16,27 +29,46 @@ body {
 .para {
   font-size: 22px;
 }
+*/
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+/* Rearranged Code */
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
 
+.para {
+  font-size: 22px;
+}
+
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Used the .button.confirm selector */
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
+.button.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
 }
 
+/* Rearranged code and used .text.child selector*/
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+.text.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
 }
